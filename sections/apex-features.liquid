@@ -1,0 +1,74 @@
+<section class="section section--dark">
+  <div class="container">
+    <div class="section__header">
+      {% if section.settings.label != blank %}
+        <span class="apex-section-label">{{ section.settings.label }}</span>
+      {% endif %}
+      {% if section.settings.heading != blank %}
+        <h2 class="section__title">{{ section.settings.heading }}</h2>
+      {% endif %}
+      <div class="apex-divider"></div>
+      {% if section.settings.description != blank %}
+        <p class="section__description">{{ section.settings.description }}</p>
+      {% endif %}
+    </div>
+
+    <div class="grid-3">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'feature' %}
+            <div class="apex-feature" {{ block.shopify_attributes }}>
+              <div class="apex-feature__icon">
+                {% if block.settings.icon != blank %}
+                  {{ block.settings.icon }}
+                {% else %}
+                  ★
+                {% endif %}
+              </div>
+              <div>
+                <div class="apex-feature__title">{{ block.settings.title }}</div>
+                <div class="apex-feature__text">{{ block.settings.text }}</div>
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Apex Features",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {"type": "text", "id": "label", "label": "Section label", "default": "Why Choose Us"},
+    {"type": "text", "id": "heading", "label": "Heading", "default": "Everything You Need to Succeed"},
+    {"type": "textarea", "id": "description", "label": "Description", "default": "Our courses are built by marketing professionals with real-world results."}
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {"type": "text", "id": "icon", "label": "Icon (emoji or text)", "default": "🎯"},
+        {"type": "text", "id": "title", "label": "Title", "default": "Proven Strategies"},
+        {"type": "textarea", "id": "text", "label": "Description", "default": "Learn marketing tactics that actually work, backed by data and real campaign results."}
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Apex Features",
+      "blocks": [
+        {"type": "feature", "settings": {"icon": "🎯", "title": "Proven Strategies", "text": "Learn marketing tactics that actually work, backed by data and real campaign results."}},
+        {"type": "feature", "settings": {"icon": "📈", "title": "Scale Your Revenue", "text": "Discover how to grow your business revenue through digital channels and automation."}},
+        {"type": "feature", "settings": {"icon": "🏆", "title": "Expert Instructors", "text": "Learn from industry professionals with 10+ years of hands-on marketing experience."}},
+        {"type": "feature", "settings": {"icon": "⚡", "title": "Fast Results", "text": "Apply what you learn immediately. Our courses are built for action, not theory."}},
+        {"type": "feature", "settings": {"icon": "🔒", "title": "Lifetime Access", "text": "Purchase once, access forever. Including all future updates and new modules."}},
+        {"type": "feature", "settings": {"icon": "💬", "title": "Community Support", "text": "Join a thriving community of marketers. Get feedback, accountability, and connections."}}
+      ]
+    }
+  ]
+}
+{% endschema %}
