@@ -1,0 +1,63 @@
+<section class="section section--darker">
+  <div class="container">
+    <div class="section__header">
+      <span class="apex-section-label">{{ section.settings.label | default: 'Student Results' }}</span>
+      <h2 class="section__title">{{ section.settings.heading | default: 'What Our Students Say' }}</h2>
+      <div class="apex-divider"></div>
+    </div>
+    <div class="grid-3">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'testimonial' %}
+            <div class="apex-testimonial" {{ block.shopify_attributes }}>
+              <div class="apex-stars">★★★★★</div>
+              <p class="apex-testimonial__text">"{{ block.settings.quote }}"</p>
+              <div class="apex-testimonial__author">
+                {% if block.settings.avatar != blank %}
+                  <img src="{{ block.settings.avatar | img_url: '100x100', crop: 'center' }}" alt="{{ block.settings.name }}" class="apex-testimonial__avatar">
+                {% endif %}
+                <div>
+                  <div class="apex-testimonial__name">{{ block.settings.name }}</div>
+                  <div class="apex-testimonial__role">{{ block.settings.role }}</div>
+                </div>
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Apex Testimonials",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {"type": "text", "id": "label", "label": "Section label", "default": "Student Results"},
+    {"type": "text", "id": "heading", "label": "Heading", "default": "What Our Students Say"}
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {"type": "textarea", "id": "quote", "label": "Quote", "default": "This course completely transformed my marketing strategy. Within 3 months, my revenue doubled."},
+        {"type": "image_picker", "id": "avatar", "label": "Avatar image"},
+        {"type": "text", "id": "name", "label": "Name", "default": "Sarah Johnson"},
+        {"type": "text", "id": "role", "label": "Role / Company", "default": "E-commerce Founder"}
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Apex Testimonials",
+      "blocks": [
+        {"type": "testimonial", "settings": {"quote": "This course completely transformed my marketing strategy. Within 3 months, my revenue doubled and my email list grew by 400%.", "name": "Sarah Johnson", "role": "E-commerce Founder"}},
+        {"type": "testimonial", "settings": {"quote": "The SEO module alone was worth the entire investment. I now rank on page 1 for my main keywords and get consistent organic traffic.", "name": "Marcus Chen", "role": "Digital Agency Owner"}},
+        {"type": "testimonial", "settings": {"quote": "Finally a course that teaches real strategies, not theory. I launched my first successful ad campaign the same week I finished the module.", "name": "Priya Patel", "role": "Course Creator"}}
+      ]
+    }
+  ]
+}
+{% endschema %}
