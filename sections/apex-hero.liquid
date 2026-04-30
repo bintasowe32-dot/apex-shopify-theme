@@ -1,0 +1,56 @@
+<div class="apex-hero" {% if section.settings.bg_image != blank %}style="background-image: url('{{ section.settings.bg_image | img_url: 'master' }}'); background-size: cover; background-position: center;"{% endif %}>
+  <div class="container">
+    <div class="apex-hero__content">
+      {% if section.settings.eyebrow != blank %}
+        <div class="apex-hero__eyebrow">{{ section.settings.eyebrow }}</div>
+      {% endif %}
+      {% if section.settings.heading != blank %}
+        <h1 class="apex-hero__title">{{ section.settings.heading }}</h1>
+      {% endif %}
+      {% if section.settings.subheading != blank %}
+        <p class="apex-hero__description">{{ section.settings.subheading }}</p>
+      {% endif %}
+      <div class="apex-hero__cta">
+        {% if section.settings.btn_primary_label != blank %}
+          <a href="{{ section.settings.btn_primary_url }}" class="button button--primary">{{ section.settings.btn_primary_label }}</a>
+        {% endif %}
+        {% if section.settings.btn_secondary_label != blank %}
+          <a href="{{ section.settings.btn_secondary_url }}" class="button button--secondary">{{ section.settings.btn_secondary_label }}</a>
+        {% endif %}
+      </div>
+      {% if section.settings.show_stats %}
+        <div class="apex-hero__stats" style="margin-top: 3rem; display: flex; gap: 2.5rem; flex-wrap: wrap;">
+          <div><div style="font-size:1.8rem;font-weight:800;color:var(--apex-gold);">{{ section.settings.stat_1_number }}</div><div style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:#888;">{{ section.settings.stat_1_label }}</div></div>
+          <div><div style="font-size:1.8rem;font-weight:800;color:var(--apex-gold);">{{ section.settings.stat_2_number }}</div><div style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:#888;">{{ section.settings.stat_2_label }}</div></div>
+          <div><div style="font-size:1.8rem;font-weight:800;color:var(--apex-gold);">{{ section.settings.stat_3_number }}</div><div style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:#888;">{{ section.settings.stat_3_label }}</div></div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Apex Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {"type": "text", "id": "eyebrow", "label": "Eyebrow text", "default": "Digital Marketing Courses"},
+    {"type": "richtext", "id": "heading", "label": "Hero heading", "default": "<p>Master Digital Marketing &amp; Scale Your Business</p>"},
+    {"type": "textarea", "id": "subheading", "label": "Subheading", "default": "Learn proven strategies from industry experts. Grow your audience, increase conversions, and build a brand that lasts."},
+    {"type": "text", "id": "btn_primary_label", "label": "Primary button label", "default": "Browse Courses"},
+    {"type": "url", "id": "btn_primary_url", "label": "Primary button URL"},
+    {"type": "text", "id": "btn_secondary_label", "label": "Secondary button label", "default": "Learn More"},
+    {"type": "url", "id": "btn_secondary_url", "label": "Secondary button URL"},
+    {"type": "image_picker", "id": "bg_image", "label": "Background image"},
+    {"type": "checkbox", "id": "show_stats", "label": "Show stats", "default": true},
+    {"type": "text", "id": "stat_1_number", "label": "Stat 1 number", "default": "10K+"},
+    {"type": "text", "id": "stat_1_label", "label": "Stat 1 label", "default": "Students enrolled"},
+    {"type": "text", "id": "stat_2_number", "label": "Stat 2 number", "default": "98%"},
+    {"type": "text", "id": "stat_2_label", "label": "Stat 2 label", "default": "Satisfaction rate"},
+    {"type": "text", "id": "stat_3_number", "label": "Stat 3 number", "default": "50+"},
+    {"type": "text", "id": "stat_3_label", "label": "Stat 3 label", "default": "Expert instructors"}
+  ],
+  "presets": [{"name": "Apex Hero"}]
+}
+{% endschema %}
