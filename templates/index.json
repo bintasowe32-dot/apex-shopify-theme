@@ -1,210 +1,172 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
+    "apex_hero": {
+      "type": "apex-hero",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "eyebrow": "Academia de Marketing Digital",
+        "heading": "<p>Domina el Marketing Digital y Transforma tu Negocio</p>",
+        "subheading": "Cursos profesionales diseñados para emprendedores, freelancers y empresas que quieren crecer online con estrategias probadas.",
+        "btn_primary_label": "Ver Todos los Cursos",
+        "btn_primary_url": "/collections/cursos-de-marketing-digital",
+        "btn_secondary_label": "Conocer más",
+        "btn_secondary_url": ""
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "apex_features": {
+      "type": "apex-features",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "feat_1": {
+          "type": "feature",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "icon": "📚",
+            "title": "Contenido Premium",
+            "text": "Más de 400 lecciones en video HD con actualizaciones constantes incluidas en tu acceso."
           }
         },
-        "text": {
-          "type": "text",
+        "feat_2": {
+          "type": "feature",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "icon": "🎯",
+            "title": "Estrategias Probadas",
+            "text": "Metodologías que ya han generado resultados reales para cientos de negocios online."
+          }
+        },
+        "feat_3": {
+          "type": "feature",
+          "settings": {
+            "icon": "🤝",
+            "title": "Comunidad Activa",
+            "text": "Acceso a nuestra comunidad privada de más de 2,000 marketers y emprendedores."
+          }
+        },
+        "feat_4": {
+          "type": "feature",
+          "settings": {
+            "icon": "🏆",
+            "title": "Certificación Oficial",
+            "text": "Obtén tu certificado al completar cada curso y valida tus nuevas habilidades."
+          }
+        },
+        "feat_5": {
+          "type": "feature",
+          "settings": {
+            "icon": "⚡",
+            "title": "Acceso de por Vida",
+            "text": "Una sola compra, acceso ilimitado. Aprende a tu propio ritmo, sin fechas de vencimiento."
+          }
+        },
+        "feat_6": {
+          "type": "feature",
+          "settings": {
+            "icon": "💎",
+            "title": "Soporte Personalizado",
+            "text": "Tutores expertos disponibles para resolver todas tus dudas y guiarte."
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "feat_1",
+        "feat_2",
+        "feat_3",
+        "feat_4",
+        "feat_5",
+        "feat_6"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "label": "¿Por qué elegirnos?",
+        "heading": "Todo lo que necesitas para triunfar online",
+        "description": "Más de 2,000 alumnos ya han transformado sus negocios con nuestra metodología."
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
+        "collection": "cursos-de-marketing-digital",
+        "products_to_show": 6,
+        "title": "Nuestros Cursos",
+        "description": "<p>Aprende de los expertos con cursos diseñados para resultados reales</p>",
+        "show_description": true,
+        "description_style": "subtitle",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
         "color_scheme": "scheme-1",
-        "show_view_all": false,
-        "swipe_on_mobile": false,
         "image_ratio": "adapt",
-        "show_secondary_image": true,
+        "image_shape": "default",
+        "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "heading_size": "h1",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "scheme-1",
         "columns_mobile": "1",
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "apex_testimonials": {
+      "type": "apex-testimonials",
+      "blocks": {
+        "test_1": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Gracias a los cursos de Apex Digital Academy, aumenté los ingresos de mi negocio un 340% en solo 6 meses. La metodología es clara, práctica y los resultados son reales.",
+            "role": "Emprendedor Digital"
+          }
+        },
+        "test_2": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "El curso de Google Ads me cambió la vida. Ahora gestiono campañas para mis propios clientes y generé mis primeros 5,000 euros al mes como freelancer.",
+            "role": "Freelancer en Marketing"
+          }
+        },
+        "test_3": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "La comunidad y el soporte son increíbles. Tenía cero conocimientos de SEO y en 3 meses mi web pasó de la página 5 a la primera de Google.",
+            "role": "Dueño de E-commerce"
+          }
+        }
+      },
+      "block_order": [
+        "test_1",
+        "test_2",
+        "test_3"
+      ],
+      "settings": {
+        "label": "Lo que dicen nuestros alumnos",
+        "heading": "Más de 2,000 historias de éxito"
+      }
+    },
+    "apex_cta": {
+      "type": "apex-cta-banner",
+      "settings": {
+        "label": "Oferta por tiempo limitado",
+        "heading": "Empieza hoy con un 50% de descuento",
+        "text": "Accede a todos nuestros cursos premium y transforma tu negocio. Garantía de devolución de 30 días sin preguntas.",
+        "btn_primary_label": "Empezar Ahora — 50% OFF",
+        "btn_primary_url": "/collections/cursos-de-marketing-digital",
+        "btn_secondary_label": "Ver todos los cursos",
+        "btn_secondary_url": "/collections/cursos-de-marketing-digital",
+        "guarantee": "Garantía 30 días · Acceso inmediato · Soporte incluido"
       }
     }
   },
   "order": [
-    "image_banner",
-    "rich_text",
+    "apex_hero",
+    "apex_features",
     "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "apex_testimonials",
+    "apex_cta"
   ]
 }
